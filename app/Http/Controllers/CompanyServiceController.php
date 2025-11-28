@@ -47,8 +47,10 @@ class CompanyServiceController extends Controller
             'company_service_id' => $companyService->id,
             'user_id' => Auth::id() ?? null, // Si está logueado, se asigna, sino null (o podrías ajustar según tu lógica de negocio)
             'fecha_hora' => $validated['fecha_hora'],
+            'service_type' => CompanyService::class,
+            'service_id' => $companyService->id,
             'mensaje_adicional' => $validated['mensaje_adicional'],
-            'estado' => 'pendiente',
+            'estado' => 'Pendiente',
         ]);
 
         // Enviar correo de confirmación

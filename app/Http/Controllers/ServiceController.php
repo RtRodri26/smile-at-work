@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\CompanyRequestConfirmation;
 
+
 class ServiceController extends Controller
 {
     // Mostrar formulario para empresa
@@ -48,13 +49,15 @@ class ServiceController extends Controller
     $appointment = Appointment::create([
         'company_service_id' => $companyService->id,
         'user_id' => auth()->id() ?? 1,
+        'service_type' => CompanyService::class,
+        'service_id' => $companyService->id,
         'fecha_hora' => $validated['fecha_hora'],
         'mensaje_adicional' => $validated['mensaje_adicional'],
         'estado' => 'pendiente',
     ]);
 
     // Enviar correo de confirmación - Asegúrate de pasar los objetos, no IDs
-    Mail::to($companyService->email)->send(new CompanyRequestConfirmation($companyService, $appointment));
+    //Mail::to($companyService->email)->send(new CompanyRequestConfirmation($companyService, $appointment));
 
     return redirect()->route('services.company.success')
                      ->with('success', 'Solicitud enviada correctamente.');
