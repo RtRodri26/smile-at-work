@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'google' => [
+        'calendar_id' => env('GOOGLE_CALENDAR_ID'),
+        'service_account_email' => env('GOOGLE_SERVICE_ACCOUNT_EMAIL'),
+    ],
+
 ];
