@@ -8,6 +8,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyServiceController;
+use App\Http\Controllers\CommunityController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -59,4 +60,13 @@ Route::prefix('services')->group(function () {
     // Trabaja con Nosotros
     Route::get('/job-application', [JobApplicationController::class, 'create'])->name('job.application.create');
     Route::post('/job-application', [JobApplicationController::class, 'store'])->name('job.application.store');
+});
+
+
+
+Route::prefix('community')->group(function () {
+    Route::get('/', [CommunityController::class, 'index'])->name('community.index');
+    Route::post('/posts', [CommunityController::class, 'storePost'])->name('community.posts.store');
+    Route::post('/posts/{post}/like', [CommunityController::class, 'likePost'])->name('community.posts.like');
+    Route::post('/posts/{post}/comment', [CommunityController::class, 'storeComment'])->name('community.posts.comment');
 });

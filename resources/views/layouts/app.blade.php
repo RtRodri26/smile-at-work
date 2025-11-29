@@ -110,11 +110,19 @@
                     </div>
                 </div>
 
+
                 <!-- Perfil -->
                 <a href="{{ route('profile') }}" 
                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200 {{ request()->routeIs('profile') ? 'active-nav' : '' }}">
                     <i class="fas fa-user w-5"></i>
                     <span>Mi Perfil</span>
+                </a>
+
+                                <!-- Comunidad -->
+                <a href="{{ route('community.index') }}" 
+                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 transition-colors duration-200 {{ request()->routeIs('community.index') ? 'active-nav' : '' }}">
+                    <i class="fas fa-users w-5"></i>
+                    <span>Comunidad</span>
                 </a>
 
                 <!-- Configuración -->

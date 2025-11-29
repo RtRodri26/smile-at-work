@@ -26,6 +26,11 @@ class JobApplication extends Model
         'comentarios_admin'
     ];
 
+    public function appointments()
+{
+    return $this->morphMany(Appointment::class, 'service');
+}
+
     protected $casts = [
         'fecha_entrevista' => 'datetime',
     ];

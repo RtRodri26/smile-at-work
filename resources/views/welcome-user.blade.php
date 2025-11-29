@@ -43,7 +43,7 @@
                 </a>
 
                 <!-- Servicios -->
-                <a href="{{ route('dashboard') }}" 
+                <a href="{{ route('services.index') }}" 
                    class="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 hover:border-blue-300 transition-all duration-300">
                     <div class="p-3 rounded-full bg-blue-100 text-blue-600 mr-4">
                         <i class="fas fa-concierge-bell text-xl"></i>

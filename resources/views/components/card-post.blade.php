@@ -4,19 +4,19 @@
     
     <!-- Header del Post -->
     <div class="p-4 flex items-center justify-between">
-        <a href="{{ route('user.perfil.ver', $post->user->id_user) }}" class="flex items-center space-x-3 group">
-            @if($post->user->foto_perfil)
-                <img src="{{ asset('storage/' . $post->user->foto_perfil) }}" 
-                     alt="{{ $post->user->nombres }}" 
+        <a href="{{ route('user.perfil.ver', $post->usuario->id_usuario) }}" class="flex items-center space-x-3 group">
+            @if($post->usuario->foto_perfil)
+                <img src="{{ asset('storage/' . $post->usuario->foto_perfil) }}" 
+                     alt="{{ $post->usuario->nombres }}" 
                      class="w-11 h-11 rounded-full object-cover border-2 border-smile-yellow group-hover:border-smile-orange transition-colors">
             @else
                 <div class="w-11 h-11 rounded-full bg-gradient-to-br from-smile-yellow to-smile-orange flex items-center justify-center text-white font-bold">
-                    {{ strtoupper(substr($post->user->nombres, 0, 1)) }}
+                    {{ strtoupper(substr($post->usuario->nombres, 0, 1)) }}
                 </div>
             @endif
             <div>
                 <p class="font-semibold text-gray-800 group-hover:text-smile-orange transition-colors">
-                    {{ $post->user->nombres }} {{ $post->user->apellido_paterno }}
+                    {{ $post->usuario->nombres }} {{ $post->usuario->apellido_paterno }}
                 </p>
                 <p class="text-xs text-gray-500 flex items-center">
                     <i class="far fa-clock mr-1"></i>
@@ -29,7 +29,7 @@
         </a>
         
         <!-- Menú opciones -->
-        @if($post->id_user == auth()->id())
+        @if($post->id_usuario == auth()->id())
             <div class="relative" x-data="{ open: false }">
                 <button @click="open = !open" class="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-all">
                     <i class="fas fa-ellipsis-h"></i>
@@ -88,7 +88,7 @@
         
         <!-- Like -->
         @php
-            $liked = $post->reacciones->where('id_user', auth()->id())->count() > 0;
+            $liked = $post->reacciones->where('id_usuario', auth()->id())->count() > 0;
         @endphp
         <button onclick="toggleLike({{ $post->id_publicacion }}, this)" 
                 class="flex-1 flex items-center justify-center space-x-2 py-2 rounded-xl hover:bg-gray-50 transition-all group {{ $liked ? 'text-smile-red' : 'text-gray-500' }}">
@@ -117,18 +117,18 @@
         <div class="px-4 pb-4 space-y-2">
             @foreach($post->comentarios->take(2) as $comentario)
                 <div class="flex items-start space-x-2">
-                    @if($comentario->user->foto_perfil)
-                        <img src="{{ asset('storage/' . $comentario->user->foto_perfil) }}" 
-                             alt="{{ $comentario->user->nombres }}" 
+                    @if($comentario->usuario->foto_perfil)
+                        <img src="{{ asset('storage/' . $comentario->usuario->foto_perfil) }}" 
+                             alt="{{ $comentario->usuario->nombres }}" 
                              class="w-7 h-7 rounded-full object-cover">
                     @else
                         <div class="w-7 h-7 rounded-full bg-gradient-to-br from-smile-yellow to-smile-orange flex items-center justify-center text-white text-xs font-bold">
-                            {{ strtoupper(substr($comentario->user->nombres, 0, 1)) }}
+                            {{ strtoupper(substr($comentario->usuario->nombres, 0, 1)) }}
                         </div>
                     @endif
                     <div class="flex-1 bg-gray-50 rounded-xl px-3 py-2">
                         <p class="text-sm">
-                            <span class="font-semibold text-gray-800">{{ $comentario->user->nombres }}</span>
+                            <span class="font-semibold text-gray-800">{{ $comentario->usuario->nombres }}</span>
                             <span class="text-gray-600">{{ $comentario->contenido }}</span>
                         </p>
                     </div>

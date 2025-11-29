@@ -78,6 +78,8 @@ class User extends Authenticatable
         return $this->hasMany(CompanyService::class);
     }
 
+
+
     public function universityServices()
     {
         return $this->hasMany(UniversityService::class);
@@ -97,6 +99,9 @@ class User extends Authenticatable
 {
     return $this->morphMany(Appointment::class, 'service');
 }
+
+
+
 
 
 }

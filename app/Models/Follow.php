@@ -19,6 +19,11 @@ class Follow extends Model
         return $this->belongsTo(User::class, 'follower_id');
     }
 
+    public function appointments()
+{
+    return $this->morphMany(Appointment::class, 'service');
+}
+
     public function followed()
     {
         return $this->belongsTo(User::class, 'followed_id');
