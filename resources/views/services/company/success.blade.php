@@ -17,6 +17,18 @@
             </div>
             <h2 class="mt-4 text-2xl font-bold text-gray-900">¡Solicitud Enviada!</h2>
             <p class="mt-2 text-sm text-gray-600">Hemos recibido tu solicitud correctamente. Te hemos enviado un correo de confirmación.</p>
+            
+           @if(session('calendar_url'))
+    <div class="mt-4">
+        <a href="{{ session('calendar_url') }}" target="_blank"
+           class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
+            Agregar cita a Google Calendar
+        </a>
+    </div>
+@endif
+
+
+            
             <div class="mt-6">
                 <a href="{{ route('services.company.create') }}" 
                    class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
