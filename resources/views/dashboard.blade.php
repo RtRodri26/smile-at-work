@@ -83,7 +83,7 @@
                         'description' => 'Únete a nuestro equipo',
                         'icon' => 'fas fa-handshake',
                         'color' => 'orange',
-                        'route' => route('job.application.create')
+                        'route' => route('services.job.application.create')
                     ])
                 </div>
             </div>
