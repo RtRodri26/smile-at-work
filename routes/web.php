@@ -63,9 +63,9 @@ Route::prefix('services')->group(function () {
     });
     
     // Trabaja con Nosotros
-    Route::get('/job-application', [JobApplicationController::class, 'create'])->name('job.application.create');
-    Route::post('/job-application', [JobApplicationController::class, 'store'])->name('job.application.store');
-    Route::get('/job-application/success', [JobApplicationController::class, 'success'])->name('job.application.success');
+    Route::get('/job-application', [JobApplicationController::class, 'create'])->name('services.job.application.create');
+    Route::post('/job-application', [JobApplicationController::class, 'store'])->name('services.job.application.store');
+    Route::get('/job-application/success', [JobApplicationController::class, 'success'])->name('services.job.application.success');
 });
 
 
