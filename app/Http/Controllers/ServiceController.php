@@ -10,6 +10,7 @@ use App\Mail\CitaAgendada;
 use Illuminate\Support\Facades\Http;
 use App\Services\GoogleCalendarService;
 use Carbon\Carbon;
+use App\Helpers\MailHelper;
 
 class ServiceController extends Controller
 {
