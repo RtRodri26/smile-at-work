@@ -44,14 +44,14 @@
                         <div class="flex items-center space-x-3">
                             <!-- Imagen de perfil del usuario -->
                             <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white font-bold">
-                                @if($post->user->profile_photo)
-                                    <img src="{{ Storage::url($post->user->profile_photo) }}" alt="Imagen de perfil" class="rounded-full w-full h-full object-cover">
+                                @if($post->user->profile->profile_photo)
+                                    <img src="{{ Storage::url($post->user->profile->profile_photo) }}" alt="Imagen de perfil" class="rounded-full w-full h-full object-cover">
                                 @else
-                                    {{ substr($post->user->name, 0, 1) }} <!-- Inicial del nombre -->
+                                    {{ substr($post->user->nombres, 0, 1) }} <!-- Inicial del nombre -->
                                 @endif
                             </div>
                             <div>
-                                <p class="font-semibold">{{ $post->user->name }}</p> <!-- Nombre del usuario -->
+                                <p class="font-semibold">{{ $post->user->nombres }}</p> <!-- Nombre del usuario -->
                                 <p class="text-xs text-gray-500">{{ $post->created_at->diffForHumans() }}</p> <!-- Fecha -->
                             </div>
                         </div>
@@ -86,14 +86,14 @@
                                 <div class="mb-2 p-2 bg-gray-50 rounded">
                                     <div class="flex items-start space-x-2">
                                         <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                                            @if($comment->user->profile_photo)
-                                                <img src="{{ Storage::url($comment->user->profile_photo) }}" alt="Imagen de perfil" class="rounded-full w-full h-full object-cover">
+                                            @if($comment->user->profile->profile_photo)
+                                                <img src="{{ Storage::url($comment->user->profile->profile_photo) }}" alt="Imagen de perfil" class="rounded-full w-full h-full object-cover">
                                             @else
-                                                {{ substr($comment->user->name, 0, 1) }}
+                                                {{ substr($comment->user->nombres, 0, 1) }}
                                             @endif
                                         </div>
                                         <div class="flex-1">
-                                            <p class="font-semibold text-sm">{{ $comment->user->name }}</p>
+                                            <p class="font-semibold text-sm">{{ $comment->user->nombres }}</p>
                                             <p class="text-gray-700">{{ $comment->content }}</p>
                                             <p class="text-xs text-gray-500">{{ $comment->created_at->diffForHumans() }}</p>
                                         </div>
@@ -170,10 +170,10 @@
                 newComment.innerHTML = ` 
                     <div class="flex items-start space-x-2">
                         <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                            ${data.comment.user.name[0]}
+                            ${data.comment.user.nombres[0]}
                         </div>
                         <div>
-                            <p class="font-semibold">${data.comment.user.name}</p>
+                            <p class="font-semibold">${data.comment.user.nombres}</p>
                             <p class="text-gray-700">${data.comment.content}</p>
                             <p class="text-xs text-gray-500">${new Date(data.comment.created_at).toLocaleString()}</p>
                         </div>
