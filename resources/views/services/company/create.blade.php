@@ -1,7 +1,8 @@
-{{-- resources/views/services/company/create.blade.php --}}
 @extends('layouts.app')
 
-@section('title', 'Solicitud de Servicio - Empresa')
+@section('title', 'Solicitud de Servicio para Empresas - Smile At Work')
+@section('page-title', 'Solicitud de Servicio para Empresas')
+@section('page-subtitle', 'Complete el formulario para solicitar nuestros servicios')
 
 @section('content')
 <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
