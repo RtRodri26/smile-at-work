@@ -83,20 +83,35 @@ class ServiceController extends Controller
         // ---------------------------------------------------
         // 5. ENVIAR GOOGLE FORMS
         // ---------------------------------------------------
+        // Http::asForm()->post(
+        //     "https://docs.google.com/forms/d/e/1FAIpQLSf1OmG1EUZFaM43FOc_BE_apV5zC9BLhWEcYIxop8uAiD_Jow/formResponse",
+        //     [
+        //         "entry.261398419"  => $validated['nombre_empresa'],
+        //         "entry.136904738"  => $validated['persona_contacto'],
+        //         "entry.1395866429" => $validated['cargo'],
+        //         "entry.992963390"  => $validated['email'],
+        //         "entry.1849773656" => $validated['telefono'],
+        //         "entry.215061745"  => $validated['num_colaboradores'],
+        //         "entry.68088871"   => $validated['tipo_servicio'],
+        //         "entry.589867778"  => $validated['fecha_hora'],
+        //         "entry.199205871"  => $validated['mensaje_adicional'],
+        //     ]
+        // );
+
         Http::asForm()->post(
-            "https://docs.google.com/forms/d/e/1FAIpQLSf1OmG1EUZFaM43FOc_BE_apV5zC9BLhWEcYIxop8uAiD_Jow/formResponse",
-            [
-                "entry.261398419"  => $validated['nombre_empresa'],
-                "entry.136904738"  => $validated['persona_contacto'],
-                "entry.1395866429" => $validated['cargo'],
-                "entry.992963390"  => $validated['email'],
-                "entry.1849773656" => $validated['telefono'],
-                "entry.215061745"  => $validated['num_colaboradores'],
-                "entry.68088871"   => $validated['tipo_servicio'],
-                "entry.589867778"  => $validated['fecha_hora'],
-                "entry.199205871"  => $validated['mensaje_adicional'],
-            ]
-        );
+             "https://docs.google.com/forms/d/e/1FAIpQLSc6YEBPj5Uniq71xoJso1aS7aG8XI62QRopodisr-Ry-oqSsw/formResponse",
+             [
+                 "entry.1313718552"  => $validated['nombre_empresa'],
+                 "entry.1423464586"  => $validated['persona_contacto'],
+                 "entry.1580732550" => $validated['cargo'],
+                 "entry.753585739"  => $validated['email'],
+                 "entry.532337350" => $validated['telefono'],
+                 "entry.1927127875"  => $validated['num_colaboradores'],
+                 "entry.866964533"   => $validated['tipo_servicio'],
+                 "entry.1237258928"  => $validated['fecha_hora'],
+                 "entry.1012171455"  => $validated['mensaje_adicional'],
+             ]
+         );
 
         // ---------------------------------------------------
         // 6. ENVIAR CORREO
