@@ -9,6 +9,9 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyServiceController;
 use App\Http\Controllers\CommunityController;
+use App\Http\Controllers\UniversityServiceController;
+use App\Http\Controllers\EventServiceController;
+use App\Http\Controllers\JobApplicationController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -50,16 +53,19 @@ Route::prefix('services')->group(function () {
     Route::post('/company', [ServiceController::class, 'storeCompany'])->name('services.company.store');
     Route::get('/company/success', [ServiceController::class, 'success'])->name('services.company.success');
   
-        Route::get('/university', [ServiceController::class, 'createUniversity'])->name('services.university.create');
-        Route::post('/university', [ServiceController::class, 'storeUniversity'])->name('services.university.store');
+        Route::get('/university', [UniversityServiceController::class, 'create'])->name('services.university.create');
+        Route::post('/university', [UniversityServiceController::class, 'store'])->name('services.university.store');
+        Route::get('/university/success', [UniversityServiceController::class, 'success'])->name('services.university.success');
         
-        Route::get('/event', [ServiceController::class, 'createEvent'])->name('services.event.create');
-        Route::post('/event', [ServiceController::class, 'storeEvent'])->name('services.event.store');
+        Route::get('/event', [EventServiceController::class, 'create'])->name('services.event.create');
+        Route::post('/event', [EventServiceController::class, 'store'])->name('services.event.store');
+        Route::get('/event/success', [EventServiceController::class, 'success'])->name('services.event.success');
     });
     
     // Trabaja con Nosotros
     Route::get('/job-application', [JobApplicationController::class, 'create'])->name('job.application.create');
     Route::post('/job-application', [JobApplicationController::class, 'store'])->name('job.application.store');
+    Route::get('/job-application/success', [JobApplicationController::class, 'success'])->name('job.application.success');
 });
 
 
