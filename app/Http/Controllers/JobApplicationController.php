@@ -80,19 +80,35 @@ class JobApplicationController extends Controller
         ]);
 
        // Enviar datos a Google Forms
-        Http::asForm()->post(
-             "https://docs.google.com/forms/d/e/1FAIpQLSe_d5N2Mbd57l3tS_o3gdrZ6Loo34u7BImYuXJn8AgaYHWkNA/formResponse",
+    //     Http::asForm()->post(
+    //          "https://docs.google.com/forms/d/e/1FAIpQLSe_d5N2Mbd57l3tS_o3gdrZ6Loo34u7BImYuXJn8AgaYHWkNA/formResponse",
+    // [
+    //     "entry.1990155931"   => $request->nombre_completo,
+    //     "entry.840833559"  => $request->edad,
+    //     "entry.1348487280"  => $request->distrito,
+    //     "entry.1932684074"   => $request->cargo,
+    //     "entry.1568097584"   => $request->disponibilidad,
+    //     "entry.521983805"  => $request->experiencia,
+    //     "entry.1547635733"   => $request->cv,
+    //     "entry.622337295"  => $request->telefono,
+    //     "entry.1270076324"  => $request->email,
+    //     "entry.205231113"  => $request->fecha_entrevista,
+    // ]
+    //     );
+
+    Http::asForm()->post(
+             "https://docs.google.com/forms/d/e/1FAIpQLSd4JBYjqK96zvGT1rJrIiGftqY5OAF_S0GoWhVRKno5L_elng/formResponse",
     [
-        "entry.1990155931"   => $request->nombre_completo,
-        "entry.840833559"  => $request->edad,
-        "entry.1348487280"  => $request->distrito,
-        "entry.1932684074"   => $request->cargo,
-        "entry.1568097584"   => $request->disponibilidad,
-        "entry.521983805"  => $request->experiencia,
-        "entry.1547635733"   => $request->cv,
-        "entry.622337295"  => $request->telefono,
-        "entry.1270076324"  => $request->email,
-        "entry.205231113"  => $request->fecha_entrevista,
+        "entry.1620524281"   => $request->nombre_completo,
+        "entry.438063057"  => $request->edad,
+        "entry.1091206793"  => $request->distrito,
+        "entry.846590479"   => $request->cargo,
+        "entry.2069089308"   => $request->disponibilidad,
+        "entry.400027948"  => $request->experiencia,
+        "entry.241453873"   => $request->cv,
+        "entry.1009976822"  => $request->telefono,
+        "entry.1164482636"  => $request->email,
+        "entry.92377361"  => $request->fecha_entrevista,
     ]
         );
 

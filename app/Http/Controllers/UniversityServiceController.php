@@ -75,17 +75,31 @@ class UniversityServiceController extends Controller
         ]);
 
         // Enviar datos a Google Forms
-        Http::asForm()->post(
-             "https://docs.google.com/forms/d/e/1FAIpQLSek8WXVuZb8w_XNjMdtnyx_kZmICiTVmKdKxVsqQE-zfIORRw/formResponse",
+    //     Http::asForm()->post(
+    //          "https://docs.google.com/forms/d/e/1FAIpQLSek8WXVuZb8w_XNjMdtnyx_kZmICiTVmKdKxVsqQE-zfIORRw/formResponse",
+    // [
+    //     "entry.869764052"   => $request->nombre_universidad,
+    //     "entry.2097108218"  => $request->area_facultad,
+    //     "entry.1585850004"  => $request->persona_contacto,
+    //     "entry.406786088"   => $request->email,
+    //     "entry.367926774"   => $request->telefono,
+    //     "entry.1208678419"  => $request->tipo_servicio,
+    //     "entry.559174007"   => $request->fecha_estimado,
+    //     "entry.2007732100"  => $request->comentarios,
+    // ]
+    //     );
+
+    Http::asForm()->post(
+             "https://docs.google.com/forms/d/e/1FAIpQLScyIU8y9zTO0N4aLQTfjGT4QQK9vVyAZ36vcrhe21mqeDD28A/formResponse",
     [
-        "entry.869764052"   => $request->nombre_universidad,
-        "entry.2097108218"  => $request->area_facultad,
-        "entry.1585850004"  => $request->persona_contacto,
-        "entry.406786088"   => $request->email,
-        "entry.367926774"   => $request->telefono,
-        "entry.1208678419"  => $request->tipo_servicio,
-        "entry.559174007"   => $request->fecha_estimado,
-        "entry.2007732100"  => $request->comentarios,
+        "entry.618884553"   => $request->nombre_universidad,
+        "entry.1609623055"  => $request->area_facultad,
+        "entry.2068782042"  => $request->persona_contacto,
+        "entry.1372832319"   => $request->email,
+        "entry.1679556401"   => $request->telefono,
+        "entry.883898500"  => $request->tipo_servicio,
+        "entry.1114992071"   => $request->fecha_estimado,
+        "entry.842406466"  => $request->comentarios,
     ]
         );
 

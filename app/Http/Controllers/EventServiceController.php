@@ -80,19 +80,35 @@ class EventServiceController extends Controller
         ]);
 
         // Enviar datos a Google Forms
-        Http::asForm()->post(
-             "https://docs.google.com/forms/d/e/1FAIpQLSfitQ1a0iSIbU6HP16799xXQWk9Ll6N5riu6UZ3PufnNC_EKw/formResponse",
+    //     Http::asForm()->post(
+    //          "https://docs.google.com/forms/d/e/1FAIpQLSfitQ1a0iSIbU6HP16799xXQWk9Ll6N5riu6UZ3PufnNC_EKw/formResponse",
+    // [
+    //     "entry.27074974"   => $request->nombre_evento,
+    //     "entry.530239391"  => $request->tipo_evento,
+    //     "entry.1120404175"  => $request->fecha_evento,
+    //     "entry.1892985053"   => $request->duracion,
+    //     "entry.625890627"   => $request->lugar,
+    //     "entry.158880118"  => $request->cantidad_ninos,
+    //     "entry.472556606"   => $request->persona_contacto,
+    //     "entry.1356413125"  => $request->telefono,
+    //     "entry.845165181"  => $request->email,
+    //     "entry.1888422063"  => $request->necesidades_especiales,
+    // ]
+    //     );
+
+    Http::asForm()->post(
+             "https://docs.google.com/forms/d/e/1FAIpQLSc2VYEWqh0WOK5G2VUsBxRn0ik0U2ofeGgKMvX9rQ-LvvELew/formResponse",
     [
-        "entry.27074974"   => $request->nombre_evento,
-        "entry.530239391"  => $request->tipo_evento,
-        "entry.1120404175"  => $request->fecha_evento,
-        "entry.1892985053"   => $request->duracion,
-        "entry.625890627"   => $request->lugar,
-        "entry.158880118"  => $request->cantidad_ninos,
-        "entry.472556606"   => $request->persona_contacto,
-        "entry.1356413125"  => $request->telefono,
-        "entry.845165181"  => $request->email,
-        "entry.1888422063"  => $request->necesidades_especiales,
+        "entry.957638573"   => $request->nombre_evento,
+        "entry.182567590"  => $request->tipo_evento,
+        "entry.272219133"  => $request->fecha_evento,
+        "entry.994995471"   => $request->duracion,
+        "entry.310877991"   => $request->lugar,
+        "entry.1791902044"  => $request->cantidad_ninos,
+        "entry.1324005137"   => $request->persona_contacto,
+        "entry.543711919"  => $request->telefono,
+        "entry.1707007514"  => $request->email,
+        "entry.1226445907"  => $request->necesidades_especiales,
     ]
         );
 
