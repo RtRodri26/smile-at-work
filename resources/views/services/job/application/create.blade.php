@@ -12,7 +12,7 @@
             <p class="mt-2 text-sm text-gray-600">Complete el formulario para unirse a nuestro equipo</p>
         </div>
 
-        <form action="{{ route('job.application.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
+        <form action="{{ route('services.job.application.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
             @csrf
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {{-- Nombre completo --}}

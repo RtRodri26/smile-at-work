@@ -71,7 +71,6 @@ class JobApplicationController extends Controller
 
         // Crear Appointment
         $appointment = Appointment::create([
-            'company_service_id' => $eventService->id,
             'service_type' => JobApplication::class,
             'service_id'   => $eventService->id,
             'user_id'      => auth()->id() ?? 1,

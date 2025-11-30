@@ -102,7 +102,7 @@
                             <span class="text-sm">Para Eventos</span>
                         </a>
                         
-                        <a href="{{ route('job.application.create') }}" 
+                        <a href="{{ route('services.job.application.create') }}" 
                            class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-700 transition-colors duration-200 {{ request()->routeIs('job.application.*') ? 'text-purple-300' : '' }}">
                             <i class="fas fa-handshake w-4"></i>
                             <span class="text-sm">Trabaja con Nosotros</span>
