@@ -90,4 +90,91 @@ public function buildClientCalendarUrl(array $validated, string $startIso, strin
 }
 
 
+public function buildUniversityClientCalendarUrl(array $validated, string $startIso, string $endIso)
+{
+    // Convertir fechas ISO 8601 al formato que Google Calendar usa (YYYYMMDDTHHMMSSZ)
+    $start = Carbon::parse($startIso)->format('Ymd\THis');
+    $end   = Carbon::parse($endIso)->format('Ymd\THis');
+
+    // Título del evento
+    $title = urlencode("Reunión con " . $validated['nombre_universidad']);
+
+    // Detalles del evento
+    $details = urlencode(
+        "Universidad: {$validated['nombre_universidad']}\n" .
+        "Área / Facultad: {$validated['area_facultad']}\n" .
+        "Contacto: {$validated['persona_contacto']}\n" .
+        "Correo: {$validated['email']}\n" .
+        "Teléfono: {$validated['telefono']}\n" .
+        "Tipo de servicio: {$validated['tipo_servicio']}\n" .
+        "Comentarios: {$validated['comentarios']}"
+    );
+
+    // Construir URL del calendario para el cliente
+    return "https://calendar.google.com/calendar/render?action=TEMPLATE" .
+           "&text={$title}" .
+           "&dates={$start}/{$end}" .
+           "&details={$details}" .
+           "&ctz=America/Lima";
+}
+
+public function buildEventClientCalendarUrl(array $validated, string $startIso, string $endIso)
+{
+    // Convertir fechas ISO 8601 al formato que Google Calendar usa (YYYYMMDDTHHMMSSZ)
+    $start = Carbon::parse($startIso)->format('Ymd\THis');
+    $end   = Carbon::parse($endIso)->format('Ymd\THis');
+
+    // Título del evento
+    $title = urlencode("Reunión con " . $validated['nombre_evento']);
+
+    // Detalles del evento
+    $details = urlencode(
+        "Evento: {$validated['nombre_evento']}\n" .
+        "Tipo de evento: {$validated['tipo_evento']}\n" .
+        "Contacto: {$validated['persona_contacto']}\n" .
+        "Correo: {$validated['email']}\n" .
+        "Teléfono: {$validated['telefono']}\n" .
+        "Duración: {$validated['duracion']}\n" .
+        "Lugar: {$validated['lugar']}\n" .
+        "Cantidad de niños: {$validated['cantidad_ninos']}\n" .
+        "Necesidades especiales: {$validated['necesidades_especiales']}"
+    );
+
+    // Construir URL del calendario para el cliente
+    return "https://calendar.google.com/calendar/render?action=TEMPLATE" .
+           "&text={$title}" .
+           "&dates={$start}/{$end}" .
+           "&details={$details}" .
+           "&ctz=America/Lima";
+}
+
+public function buildSolicitudClientCalendarUrl(array $validated, string $startIso, string $endIso)
+{
+    // Convertir fechas ISO 8601 al formato que Google Calendar usa (YYYYMMDDTHHMMSSZ)
+    $start = Carbon::parse($startIso)->format('Ymd\THis');
+    $end   = Carbon::parse($endIso)->format('Ymd\THis');
+
+    // Título del evento
+    $title = urlencode("Entrevista con " . $validated['nombre_completo']);
+
+    // Detalles del evento
+    $details = urlencode(
+        "Postulante: {$validated['nombre_completo']}\n" .
+        "Edad: {$validated['edad']}\n" .
+        "Distrito: {$validated['distrito']}\n" .
+        "Cargo postulado: {$validated['cargo']}\n" .
+        "Disponibilidad: {$validated['disponibilidad']}\n" .
+        "Experiencia: {$validated['experiencia']}\n" .
+        "Correo: {$validated['email']}\n" .
+        "Teléfono: {$validated['telefono']}\n"    );
+
+    // Construir URL del calendario para el cliente
+    return "https://calendar.google.com/calendar/render?action=TEMPLATE" .
+           "&text={$title}" .
+           "&dates={$start}/{$end}" .
+           "&details={$details}" .
+           "&ctz=America/Lima";
+}
+
+
 }
