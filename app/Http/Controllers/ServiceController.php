@@ -99,16 +99,20 @@ class ServiceController extends Controller
         // ---------------------------------------------------
         // 6. ENVIAR CORREO
         // ---------------------------------------------------
-        Mail::to($validated['email'])->send(new CitaAgendada([
-            'nombre'   => $validated['persona_contacto'],
-            'fecha'    => $fecha->format('Y-m-d'),
-            'hora'     => $fecha->format('H:i'),
-            'empresa'  => $validated['nombre_empresa'],
-            'meetLink' => null,
-            'tipo_usuario' => 'cliente',
-            'detalle' => $validated['mensaje_adicional'],
-        ]));
+        // Mail::to($validated['email'])->send(new CitaAgendada([
+        //     'nombre'   => $validated['persona_contacto'],
+        //     'fecha'    => $fecha->format('Y-m-d'),
+        //     'hora'     => $fecha->format('H:i'),
+        //     'empresa'  => $validated['nombre_empresa'],
+        //     'meetLink' => null,
+        //     'tipo_usuario' => 'cliente',
+        //     'detalle' => $validated['mensaje_adicional'],
+        // ]));
 
+
+Mail::to($validated['email'])->send(
+    new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'empresa', 'cliente'))
+);
 
         // 5. Enviar correo al ADMIN (con link)
     $adminEmail = config('mail.admin_email'); // puedes definirlo en .env
@@ -119,22 +123,26 @@ class ServiceController extends Controller
     $end,
     $adminEmail
 );
-    Mail::to($adminEmail)->send(new CitaAgendada([
-        'nombre'   => 'Administrador',
-        'fecha'    => $fecha->format('Y-m-d'),
-        'hora'     => $fecha->format('H:i'),
-        'empresa'  => $validated['nombre_empresa'],
-        'telefono' => $validated['telefono'],
-        'email'    => $validated['email'],
-        'cargo'    => $validated['cargo'],
-        'tipo_servicio' => $validated['tipo_servicio'],
-        'num_colaboradores' => $validated['num_colaboradores'],
-        'persona_contacto' => $validated['persona_contacto'],
-        'mensaje_adicional' => $validated['mensaje_adicional'],
-        'meetLink' => $meetLink,
-        'tipo_usuario' => 'admin',
-        'detalle' => $validated['mensaje_adicional'],
-    ]));
+    // Mail::to($adminEmail)->send(new CitaAgendada([
+    //     'nombre'   => 'Administrador',
+    //     'fecha'    => $fecha->format('Y-m-d'),
+    //     'hora'     => $fecha->format('H:i'),
+    //     'empresa'  => $validated['nombre_empresa'],
+    //     'telefono' => $validated['telefono'],
+    //     'email'    => $validated['email'],
+    //     'cargo'    => $validated['cargo'],
+    //     'tipo_servicio' => $validated['tipo_servicio'],
+    //     'num_colaboradores' => $validated['num_colaboradores'],
+    //     'persona_contacto' => $validated['persona_contacto'],
+    //     'mensaje_adicional' => $validated['mensaje_adicional'],
+    //     'meetLink' => $meetLink,
+    //     'tipo_usuario' => 'admin',
+    //     'detalle' => $validated['mensaje_adicional'],
+    // ]));
+
+Mail::to(config('mail.admin_email'))->send(
+    new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'empresa', 'admin', $meetLink))
+);
         // ---------------------------------------------------
         // 7. URL PARA EL CALENDARIO DEL CLIENTE (OPCIONAL)
         // ---------------------------------------------------
