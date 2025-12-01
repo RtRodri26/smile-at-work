@@ -255,26 +255,35 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="gradient-bg text-white pt-20 pb-20 relative overflow-hidden">
+      <section class="gradient-bg text-white pt-20 pb-20 relative overflow-hidden">
         <!-- Background elements -->
         <div class="absolute top-10 left-10 w-20 h-20 bubble floating opacity-20 color-bg-yellow"></div>
         <div class="absolute top-1/4 right-20 w-16 h-16 bubble floating opacity-20 color-bg-blue" style="animation-delay: 0.5s;"></div>
         <div class="absolute bottom-20 left-1/4 w-24 h-24 bubble floating opacity-20 color-bg-green" style="animation-delay: 1s;"></div>
         <div class="absolute bottom-10 right-10 w-12 h-12 bubble floating opacity-20 color-bg-orange" style="animation-delay: 1.5s;"></div>
         
+        <!-- Floating stickers -->
+        <div class="floating-sticker sticker-1 comic-font">¡Aprendizaje Divertido!</div>
+        <div class="floating-sticker sticker-2 comic-font">Espacios Seguros</div>
+        <div class="floating-sticker sticker-3 comic-font">Estimulación Temprana</div>
+        
         <div class="section-container pt-16 relative z-10">
             <div class="text-center max-w-4xl mx-auto fade-in">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight comic-font">
-                    Transformamos Espacios<br>con <span class="rainbow-text">Alegría</span>
+                    Guarderías Móviles donde<br><span class="rainbow-text">Trabajas o Estudias</span>
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 opacity-90">
-                    Creamos ambientes laborales y educativos positivos donde las personas puedan florecer y alcanzar su máximo potencial.
+                    Llevamos espacios seguros, flexibles y llenos de estímulos para niños directamente a empresas, universidades y eventos.
+                </p>
+                <p class="text-lg mb-10 max-w-3xl mx-auto">
+                    Sabemos que muchos padres y madres no tienen con quién dejar a sus pequeños, y eso les impide trabajar, estudiar o capacitarse con tranquilidad. 
+                    <strong>¡Nosotros tenemos la solución!</strong>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('register') }}" class="bg-white font-bold py-4 px-8 rounded-full soft-shadow transition-all duration-300 transform hover:scale-105 color-text-blue">
-                        Comenzar Ahora
+                    <a href="#register" class="bg-white font-bold py-4 px-8 rounded-full soft-shadow transition-all duration-300 transform hover:scale-105 color-text-blue">
+                        Solicitar Nuestro Servicio
                     </a>
-                    <a href="#services" class="border-2 border-white font-bold py-4 px-8 rounded-full hover:bg-white transition-all duration-300 color-text-blue">
+                    <a href="#services" class="border-2 border-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300">
                         Conocer Servicios
                     </a>
                 </div>
@@ -287,52 +296,55 @@
         <div class="section-container">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 comic-font color-text-blue">Quiénes Somos</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 comic-font color-text-blue">¿Quiénes Somos?</h2>
                     <p class="text-lg text-gray-600 mb-4">
-                        <strong class="color-text-orange">Smile At Work</strong> es una plataforma innovadora dedicada a transformar espacios laborales y educativos a través de servicios especializados que promueven el bienestar, la felicidad y la productividad.
+                        <strong class="color-text-orange">Smile At Work</strong> es una propuesta innovadora que lleva guarderías y espacios de estimulación temprana a espacios no convencionales como empresas, eventos y universidades.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Creamos ambientes seguros, flexibles y llenos de estímulos donde los niños pueden quedarse mientras sus padres continúan con sus actividades. Ofrecemos cuidado infantil profesional, estimulación temprana y actividades sensoriales.
                     </p>
                     <div class="space-y-4">
                         <div class="bg-gray-50 p-4 rounded-lg border-l-4 color-border-green soft-shadow">
                             <h3 class="text-xl font-semibold mb-2 color-text-green">Nuestra Misión</h3>
                             <p class="text-gray-600">
-                                Crear ambientes positivos donde las personas puedan desarrollarse plenamente, fomentando la alegría y el compromiso en cada espacio que tocamos.
+                                Facilitar que padres y madres puedan trabajar, estudiar o capacitarse con tranquilidad, sabiendo que sus hijos están en un espacio seguro, creativo y lleno de aprendizaje.
                             </p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg border-l-4 color-border-blue soft-shadow">
                             <h3 class="text-xl font-semibold mb-2 color-text-blue">Nuestra Visión</h3>
                             <p class="text-gray-600">
-                                Ser la plataforma líder en Latinoamérica para la transformación positiva de entornos laborales y educativos.
+                                Ser la solución líder en Latinoamérica para el cuidado infantil en espacios no convencionales, transformando miles de familias.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-4 fade-in" style="animation-delay: 0.3s;">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                             alt="Trabajo en equipo" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
+                        <img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Niños jugando en guardería" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
                         <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full flex items-center justify-center color-bg-yellow soft-shadow">
-                            <i class="fas fa-heart text-white"></i>
+                            <i class="fas fa-child text-white"></i>
                         </div>
                     </div>
                     <div class="relative mt-8">
-                        <img src="https://images.unsplash.com/photo-1551836026-d5c88ac5c4b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                             alt="Ambiente positivo" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
+                        <img src="https://images.unsplash.com/photo-1516627145497-ae6953a11bdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Actividades sensoriales para niños" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
                         <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full flex items-center justify-center color-bg-green soft-shadow">
-                            <i class="fas fa-smile text-white"></i>
+                            <i class="fas fa-hands text-white"></i>
                         </div>
                     </div>
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                             alt="Reunión productiva" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Guardería en espacio de trabajo" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
                         <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full flex items-center justify-center color-bg-blue soft-shadow">
-                            <i class="fas fa-users text-white"></i>
+                            <i class="fas fa-briefcase text-white"></i>
                         </div>
                     </div>
                     <div class="relative mt-8">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
-                             alt="Personas felices" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Padre e hijo felices" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
                         <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full flex items-center justify-center color-bg-orange soft-shadow">
-                            <i class="fas fa-star text-white"></i>
+                            <i class="fas fa-heart text-white"></i>
                         </div>
                     </div>
                 </div>
@@ -340,57 +352,46 @@
         </div>
     </section>
 
-    <!-- Valores -->
-    <section id="values" class="py-20 relative overflow-hidden" style="background-color: rgba(248, 165, 165, 0.1);">
+   <!-- Cómo Funciona -->
+      <section id="how-it-works" class="py-20 gradient-bg-pink relative overflow-hidden">
         <div class="section-container">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 comic-font color-text-blue">Nuestros Valores</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Principios que guían cada acción que realizamos y cada servicio que ofrecemos
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 comic-font color-text-blue">¿Cómo Funciona?</h2>
+                <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                    Un proceso simple para brindar tranquilidad a padres y diversión a niños
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Valor 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Paso 1 -->
                 <div class="bg-white p-8 rounded-2xl card-shadow text-center hover-lift border-t-4 fade-in color-border-yellow">
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-yellow soft-shadow">
-                        <i class="fas fa-heart text-white text-2xl"></i>
+                        <span class="text-white font-bold text-2xl">1</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Pasión</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Solicita el Servicio</h3>
                     <p class="text-gray-600">
-                        Amamos lo que hacemos y nos esforzamos por transmitir esa pasión en cada proyecto.
+                        Empresas, universidades u organizadores de eventos nos contactan para implementar nuestra guardería móvil.
                     </p>
                 </div>
 
-                <!-- Valor 2 -->
+                <!-- Paso 2 -->
                 <div class="bg-white p-8 rounded-2xl card-shadow text-center hover-lift border-t-4 fade-in color-border-green" style="animation-delay: 0.2s;">
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-green soft-shadow">
-                        <i class="fas fa-handshake text-white text-2xl"></i>
+                        <span class="text-white font-bold text-2xl">2</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Compromiso</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Adaptamos el Espacio</h3>
                     <p class="text-gray-600">
-                        Nos comprometemos con nuestros clientes para lograr los mejores resultados posibles.
+                        Creamos un ambiente seguro, creativo y lleno de aprendizaje en el lugar indicado (oficina, universidad, evento).
                     </p>
                 </div>
 
-                <!-- Valor 3 -->
+                <!-- Paso 3 -->
                 <div class="bg-white p-8 rounded-2xl card-shadow text-center hover-lift border-t-4 fade-in color-border-blue" style="animation-delay: 0.4s;">
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-blue soft-shadow">
-                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                        <span class="text-white font-bold text-2xl">3</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Innovación</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">¡Diversión y Aprendizaje!</h3>
                     <p class="text-gray-600">
-                        Buscamos constantemente nuevas formas de mejorar y adaptarnos a las necesidades.
-                    </p>
-                </div>
-
-                <!-- Valor 4 -->
-                <div class="bg-white p-8 rounded-2xl card-shadow text-center hover-lift border-t-4 fade-in color-border-orange" style="animation-delay: 0.6s;">
-                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-orange soft-shadow">
-                        <i class="fas fa-users text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Trabajo en Equipo</h3>
-                    <p class="text-gray-600">
-                        Creemos en el poder de la colaboración y el trabajo conjunto para lograr grandes cosas.
+                        Los niños disfrutan de actividades guiadas por profesionales mientras sus padres trabajan o estudian con tranquilidad.
                     </p>
                 </div>
             </div>
@@ -403,7 +404,7 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 comic-font color-text-blue">Nuestros Servicios</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Soluciones especializadas diseñadas para diferentes necesidades y contextos
+                    Soluciones flexibles diseñadas para diferentes necesidades y contextos
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -413,10 +414,10 @@
                         <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 color-bg-blue soft-shadow">
                             <i class="fas fa-building text-white text-3xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Servicios para Empresas</h3>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Para Empresas</h3>
                     </div>
                     <p class="text-gray-600 mb-6 text-center">
-                        Programas de bienestar laboral, talleres de team building y asesorías para mejorar el clima organizacional.
+                        Guardería in situ para empleados, permitiendo que padres y madres trabajen con tranquilidad mientras sus hijos están cerca, seguros y estimulados.
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
@@ -425,16 +426,16 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check mr-3 color-text-green"></i>
-                            <span class="text-gray-600">Mejora del ambiente laboral</span>
+                            <span class="text-gray-600">Reducción de ausentismo</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check mr-3 color-text-green"></i>
-                            <span class="text-gray-600">Reducción de estrés</span>
+                            <span class="text-gray-600">Mejora del clima laboral</span>
                         </li>
                     </ul>
                     <div class="text-center">
-                        <a href="{{ route('register') }}" class="btn-secondary px-8 py-3 rounded-full font-medium soft-shadow inline-block">
-                            Solicitar Servicio
+                        <a href="#register" class="btn-secondary px-8 py-3 rounded-full font-medium soft-shadow inline-block">
+                            Solicitar para Empresa
                         </a>
                     </div>
                 </div>
@@ -445,28 +446,28 @@
                         <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 color-bg-green soft-shadow">
                             <i class="fas fa-university text-white text-3xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Servicios para Universidades</h3>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Para Universidades</h3>
                     </div>
                     <p class="text-gray-600 mb-6 text-center">
-                        Actividades recreativas, programas de salud mental y eventos para enriquecer la vida universitaria.
+                        Espacios de cuidado para hijos de estudiantes y personal académico, facilitando que puedan asistir a clases o trabajar sin preocupaciones.
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
                             <i class="fas fa-check mr-3 color-text-green"></i>
-                            <span class="text-gray-600">Mejora del rendimiento académico</span>
+                            <span class="text-gray-600">Continuidad de estudios</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check mr-3 color-text-green"></i>
-                            <span class="text-gray-600">Espacios de esparcimiento</span>
+                            <span class="text-gray-600">Apoyo a estudiantes padres</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check mr-3 color-text-green"></i>
-                            <span class="text-gray-600">Apoyo emocional</span>
+                            <span class="text-gray-600">Inclusión educativa</span>
                         </li>
                     </ul>
                     <div class="text-center">
-                        <a href="{{ route('register') }}" class="px-8 py-3 rounded-full font-medium soft-shadow inline-block color-bg-green text-white hover:bg-opacity-90 transition-colors">
-                            Solicitar Servicio
+                        <a href="#register" class="px-8 py-3 rounded-full font-medium soft-shadow inline-block color-bg-green text-white hover:bg-opacity-90 transition-colors">
+                            Solicitar para Universidad
                         </a>
                     </div>
                 </div>
@@ -477,28 +478,28 @@
                         <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 color-bg-orange soft-shadow">
                             <i class="fas fa-calendar-check text-white text-3xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Servicios para Eventos</h3>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Para Eventos</h3>
                     </div>
                     <p class="text-gray-600 mb-6 text-center">
-                        Organización de eventos corporativos, educativos y sociales con un enfoque en la experiencia positiva.
+                        Guardería temporal en conferencias, congresos, ferias y cualquier evento donde los asistentes necesiten un espacio seguro para sus hijos.
                     </p>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
                             <i class="fas fa-check mr-3 color-text-green"></i>
-                            <span class="text-gray-600">Eventos memorables</span>
+                            <span class="text-gray-600">Mayor asistencia al evento</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check mr-3 color-text-green"></i>
-                            <span class="text-gray-600">Activaciones innovadoras</span>
+                            <span class="text-gray-600">Experiencia familiar completa</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check mr-3 color-text-green"></i>
-                            <span class="text-gray-600">Gestión profesional</span>
+                            <span class="text-gray-600">Valor añadido para participantes</span>
                         </li>
                     </ul>
                     <div class="text-center">
-                        <a href="{{ route('register') }}" class="btn-primary px-8 py-3 rounded-full font-medium soft-shadow inline-block">
-                            Solicitar Servicio
+                        <a href="#register" class="btn-primary px-8 py-3 rounded-full font-medium soft-shadow inline-block">
+                            Solicitar para Evento
                         </a>
                     </div>
                 </div>
@@ -506,41 +507,295 @@
         </div>
     </section>
 
+    <!-- Valores -->
+    <section id="values" class="py-20 relative overflow-hidden" style="background-color: rgba(248, 165, 165, 0.1);">
+        <div class="section-container">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 comic-font color-text-blue">Lo Que Ofrecemos</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Servicios profesionales que marcan la diferencia
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Valor 1 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow hover-lift border-t-4 fade-in color-border-yellow">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-yellow soft-shadow">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Espacios Seguros</h3>
+                    <p class="text-gray-600">
+                        Ambientes diseñados con los más altos estándares de seguridad, supervisados por profesionales calificados.
+                    </p>
+                </div>
+
+                <!-- Valor 2 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow hover-lift border-t-4 fade-in color-border-green" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-green soft-shadow">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Estimulación Temprana</h3>
+                    <p class="text-gray-600">
+                        Actividades diseñadas por especialistas para promover el desarrollo cognitivo, emocional y social de los niños.
+                    </p>
+                </div>
+
+                <!-- Valor 3 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow hover-lift border-t-4 fade-in color-border-blue" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-blue soft-shadow">
+                        <i class="fas fa-palette text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Actividades Sensoriales</h3>
+                    <p class="text-gray-600">
+                        Juegos y experiencias que estimulan los sentidos y fomentan la creatividad y curiosidad natural de los niños.
+                    </p>
+                </div>
+
+                <!-- Valor 4 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow hover-lift border-t-4 fade-in color-border-orange" style="animation-delay: 0.6s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-orange soft-shadow">
+                        <i class="fas fa-user-friends text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Profesionales Calificados</h3>
+                    <p class="text-gray-600">
+                        Equipo de educadores, psicólogos y cuidadores con experiencia en desarrollo infantil y primeros auxilios.
+                    </p>
+                </div>
+
+                <!-- Valor 5 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow hover-lift border-t-4 fade-in color-border-red" style="animation-delay: 0.8s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-red soft-shadow">
+                        <i class="fas fa-sun text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Ambientes Positivos</h3>
+                    <p class="text-gray-600">
+                        Espacios coloridos, alegres y diseñados para generar bienestar y felicidad en los niños.
+                    </p>
+                </div>
+
+                <!-- Valor 6 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow hover-lift border-t-4 fade-in color-border-blue" style="animation-delay: 1s;">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 color-bg-blue soft-shadow">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Flexibilidad Total</h3>
+                    <p class="text-gray-600">
+                        Servicios por horas, días completos o temporadas según las necesidades específicas de cada cliente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action -->
-    <section class="gradient-bg-blue py-20 relative overflow-hidden">
+  <section class="gradient-bg-blue py-20 relative overflow-hidden">
         <div class="section-container text-center">
             <div class="max-w-4xl mx-auto fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 comic-font">¿Listo para Transformar tu Espacio?</h2>
                 <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                    Únete a nuestra comunidad y descubre cómo podemos ayudarte a crear ambientes más positivos y productivos.
+                    Únete a las decenas de empresas, universidades y eventos que ya confían en Smile At Work para el cuidado de los más pequeños.
                 </p>
-                <a href="{{ route('register') }}" class="bg-white font-bold py-4 px-12 rounded-full soft-shadow transition-all duration-300 transform hover:scale-105 inline-block color-text-blue">
-                    Registrarse Ahora
+                <p class="text-lg mb-10 text-white italic">
+                    "Cuidamos a quienes amas mientras tú sigues creciendo"
+                </p>
+                <a href="#register" class="bg-white font-bold py-4 px-12 rounded-full soft-shadow transition-all duration-300 transform hover:scale-105 inline-block color-text-blue">
+                    Solicitar Servicio
                 </a>
             </div>
         </div>
     </section>
 
+
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="section-container">
-            <div class="text-center">
-                <div class="flex justify-center items-center mb-6">
-                    <div class="relative">
-                        <i class="fas fa-smile text-2xl color-text-yellow"></i>
+<footer class="bg-gray-800 text-white pt-16 pb-8 relative overflow-hidden">
+    <!-- Elementos decorativos -->
+    <div class="absolute top-0 left-0 w-32 h-32 opacity-10 color-bg-yellow rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-40 h-40 opacity-10 color-bg-blue rounded-full translate-x-1/3 translate-y-1/3"></div>
+    
+    <div class="section-container relative z-10">
+        <!-- Sección principal del footer -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            
+            <!-- Columna 1: Logo y descripción -->
+            <div class="space-y-6">
+                <div class="flex items-center">
+                    <div class="relative mr-3">
+                        <i class="fas fa-smile text-3xl color-text-yellow"></i>
                         <div class="absolute -top-1 -right-1 w-3 h-3 bubble color-bg-red"></div>
                     </div>
-                    <span class="font-bold text-xl ml-2 comic-font color-text-blue">Smile At Work</span>
+                    <div>
+                        <h2 class="font-bold text-2xl comic-font color-text-blue">Smile At Work</h2>
+                        <p class="text-sm text-gray-300">Cuidamos a quienes cuidan</p>
+                    </div>
                 </div>
-                <p class="text-gray-400 mb-4">
-                    Transformando espacios laborales y educativos con alegría y profesionalismo.
+                <p class="text-gray-400 leading-relaxed">
+                    Transformamos espacios laborales y educativos con alegría y profesionalismo, llevando guarderías y estimulación temprana donde más se necesita.
                 </p>
-                <p class="text-gray-400">
-                    &copy; 2024 Smile At Work. Todos los derechos reservados.
-                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Columna 2: Enlaces rápidos -->
+            <div>
+                <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 color-border-orange inline-block">Enlaces Rápidos</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#about" class="text-gray-400 hover:text-white hover:color-text-yellow transition-colors duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 color-text-orange"></i>
+                            Quiénes Somos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="text-gray-400 hover:text-white hover:color-text-yellow transition-colors duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 color-text-orange"></i>
+                            Nuestros Servicios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#how-it-works" class="text-gray-400 hover:text-white hover:color-text-yellow transition-colors duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 color-text-orange"></i>
+                            Cómo Funciona
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white hover:color-text-yellow transition-colors duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 color-text-orange"></i>
+                            Blog & Noticias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white hover:color-text-yellow transition-colors duration-300 flex items-center">
+                            <i class="fas fa-chevron-right text-xs mr-2 color-text-orange"></i>
+                            Preguntas Frecuentes
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Columna 3: Servicios -->
+            <div>
+                <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 color-border-green inline-block">Nuestros Servicios</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white hover:color-text-green transition-colors duration-300 flex items-center">
+                            <i class="fas fa-building mr-2 color-text-green"></i>
+                            Guarderías Empresariales
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white hover:color-text-green transition-colors duration-300 flex items-center">
+                            <i class="fas fa-university mr-2 color-text-green"></i>
+                            Guarderías Universitarias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white hover:color-text-green transition-colors duration-300 flex items-center">
+                            <i class="fas fa-calendar-alt mr-2 color-text-green"></i>
+                            Guarderías para Eventos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white hover:color-text-green transition-colors duration-300 flex items-center">
+                            <i class="fas fa-brain mr-2 color-text-green"></i>
+                            Estimulación Temprana
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-white hover:color-text-green transition-colors duration-300 flex items-center">
+                            <i class="fas fa-hands mr-2 color-text-green"></i>
+                            Actividades Sensoriales
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Columna 4: Contacto -->
+            <div>
+                <h3 class="text-xl font-bold mb-6 pb-2 border-b-2 color-border-blue inline-block">Contáctanos</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 color-text-blue"></i>
+                        <span class="text-gray-400">Oficinas en principales ciudades de Latinoamérica</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 color-text-blue"></i>
+                        <a href="tel:+18001234567" class="text-gray-400 hover:text-white transition-colors duration-300">+1 (800) 123-4567</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3 color-text-blue"></i>
+                        <a href="mailto:info@smileatwork.com" class="text-gray-400 hover:text-white transition-colors duration-300">info@smileatwork.com</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-clock mr-3 color-text-blue"></i>
+                        <span class="text-gray-400">Lun-Vie: 8:00 AM - 6:00 PM</span>
+                    </li>
+                </ul>
+                
+                <!-- Newsletter -->
+                <div class="mt-8">
+                    <h4 class="text-lg font-semibold mb-3 color-text-yellow">Suscríbete a nuestro newsletter</h4>
+                    <div class="flex">
+                        <input type="email" placeholder="Tu correo electrónico" class="flex-grow px-4 py-2 rounded-l-lg text-gray-800 focus:outline-none">
+                        <button class="color-bg-orange hover:color-bg-yellow transition-colors duration-300 px-4 py-2 rounded-r-lg font-medium">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+        
+        <!-- Línea divisoria -->
+        <div class="border-t border-gray-700 pt-8 mt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Copyright -->
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">
+                        &copy; 2024 <span class="color-text-yellow font-semibold">Smile At Work</span>. Todos los derechos reservados.
+                    </p>
+                </div>
+                
+                <!-- Enlaces legales -->
+                <div class="flex flex-wrap justify-center gap-6 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-white hover:color-text-orange transition-colors duration-300">Política de Privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white hover:color-text-orange transition-colors duration-300">Términos y Condiciones</a>
+                    <a href="#" class="text-gray-400 hover:text-white hover:color-text-orange transition-colors duration-300">Aviso Legal</a>
+                    <a href="#" class="text-gray-400 hover:text-white hover:color-text-orange transition-colors duration-300">Cookies</a>
+                </div>
+                
+                <!-- Métodos de pago -->
+                <div class="mt-4 md:mt-0">
+                    <p class="text-gray-400 text-sm mb-2 text-center md:text-right">Métodos de pago aceptados:</p>
+                    <div class="flex space-x-2">
+                        <i class="fab fa-cc-visa text-xl text-gray-400"></i>
+                        <i class="fab fa-cc-mastercard text-xl text-gray-400"></i>
+                        <i class="fab fa-cc-amex text-xl text-gray-400"></i>
+                        <i class="fab fa-cc-paypal text-xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Logo desarrolladores -->
+        <div class="text-center mt-8 pt-6 border-t border-gray-700">
+            <p class="text-gray-500 text-sm">
+                Desarrollado con <i class="fas fa-heart color-text-red mx-1"></i> por 
+                <span class="font-bold color-text-yellow">RETO & EFOJ</span> | 
+                Soluciones Digitales Profesionales
+            </p>
+        </div>
+    </div>
+</footer>
 
     <!-- Smooth Scroll -->
     <script>
