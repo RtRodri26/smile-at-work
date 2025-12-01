@@ -8,9 +8,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
 
         * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family:'Open Sans', sans-serif; background: linear-gradient(135deg,#f5f7fa 0%,#c3cfe2 100%); padding:20px; color:#333; line-height:1.6; }
+        body { font-family:'Open Sans', sans-serif; background: linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%); padding:20px; color:#333; line-height:1.6; }
         .container { max-width:650px; margin:0 auto; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.1); }
-        .header { background: linear-gradient(135deg,#2c3e50 0%,#3498db 100%); padding:30px 30px 20px; text-align:center; color:white; }
+        .header { background: linear-gradient(135deg,#0077B6 0%,#BBC34A 100%); padding:30px 30px 20px; text-align:center; color:white; }
         .logo-container { display:flex; align-items:center; justify-content:center; margin-bottom:15px; }
         .logo { width:180px; height:auto; filter:brightness(0) invert(1); }
         .header h1 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:28px; margin-bottom:10px; letter-spacing:0.5px; }
@@ -18,14 +18,14 @@
         .content { padding:35px; }
         .greeting { margin-bottom:25px; font-size:18px; }
         .greeting strong { color:#2c3e50; }
-        .info-box { background:#f8f9fa; border-radius:8px; padding:20px; margin-bottom:25px; border-left:4px solid #3498db; }
+        .info-box { background:#f8f9fa; border-radius:8px; padding:20px; margin-bottom:25px; border-left:4px solid #F28C38; }
         .info-box h3 { font-family:'Montserrat',sans-serif; color:#2c3e50; margin-bottom:15px; font-size:18px; }
         .info-item { display:flex; margin-bottom:10px; }
         .info-label { font-weight:600; min-width:180px; color:#2c3e50; }
         .info-value { flex:1; }
-        .meet-link { display:inline-block; background:#3498db; color:white; padding:12px 25px; border-radius:6px; text-decoration:none; font-weight:600; margin-top:10px; transition: all 0.3s ease; }
-        .meet-link:hover { background:#2980b9; transform:translateY(-2px); box-shadow:0 5px 15px rgba(52,152,219,0.3); }
-        .note { background:#fff9e6; border-left:4px solid #f1c40f; padding:15px; border-radius:8px; margin:25px 0; font-size:14px; }
+        .meet-link { display:inline-block; background: linear-gradient(135deg, #F28C38 0%, #F7C948 100%); color:white; padding:12px 25px; border-radius:6px; text-decoration:none; font-weight:600; margin-top:10px; transition: all 0.3s ease; }
+        .meet-link:hover { background: linear-gradient(135deg, #e67e22 0%, #f1c40f 100%); transform:translateY(-2px); box-shadow:0 5px 15px rgba(242, 140, 56, 0.3); }
+        .note { background:#fff9e6; border-left:4px solid #F7C948; padding:15px; border-radius:8px; margin:25px 0; font-size:14px; }
         .footer { background:#2c3e50; color:white; padding:30px; text-align:center; }
         .signature { display:flex; align-items:center; justify-content:center; margin-bottom:20px; }
         .signature-logo { width:80px; height:auto; margin-right:20px; filter:brightness(0) invert(1); }
@@ -48,7 +48,7 @@
     <div class="container">
         <div class="header">
             <div class="logo-container">
-                <img src="https://tuservidor.com/logo.png" alt="Logo de Smile At Work" class="logo">
+                
             </div>
             <h1>Confirmación de Cita Agendada</h1>
             <p>Su cita ha sido programada exitosamente</p>
@@ -102,12 +102,12 @@
 
         <div class="footer">
             <div class="signature">
-                <img src="https://tuservidor.com/logo.png" alt="Logo de Smile At Work" class="signature-logo">
+                <img src="https://i.postimg.cc/rpLtKHwF/3.jpg" alt="Logo de Smile At Work" class="signature-logo">
                 <div class="signature-text">
                     <strong>Equipo Smile At Work</strong><br>
                     <span class="contact-info">
                         Smile At Work S.A.<br>
-                        contacto@smileatwork.com
+                        smileatwork292517@gmail.com
                     </span>
                 </div>
             </div>
