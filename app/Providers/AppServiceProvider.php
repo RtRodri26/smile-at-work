@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
          // Si existe la variable con el JSON
-        if (env('GOOGLE_SERVICE_ACCOUNT_JSON')) {
+        if (env('GOOGLE_SERVICE_ACCOUNT_JSON_BASE64')) {
 
             $path = storage_path('app/google');
 
@@ -40,11 +40,9 @@ class AppServiceProvider extends ServiceProvider
                 mkdir($path, 0755, true);
             }
 
-            // Crea el archivo service_account.json
-            file_put_contents(
-                $path . '/service_account.json',
-                env('GOOGLE_SERVICE_ACCOUNT_JSON')
-            );
+            $jsonDecoded = base64_decode(env('GOOGLE_SERVICE_ACCOUNT_JSON_BASE64'));
+
+    file_put_contents($path . '/service_account.json', $jsonDecoded);
         }
     }
 }
