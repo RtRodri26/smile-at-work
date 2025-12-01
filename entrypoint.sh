@@ -15,13 +15,15 @@ echo "Ejecutando migraciones..."
 php artisan migrate --force
 echo "Migraciones completadas ✅"
 
-# Crear archivo JSON de Google
-if [ ! -f storage/app/google/service_account.json ] && [ ! -z "$GOOGLE_CREDENTIALS" ]; then
+# Crear archivo JSON de Google si no existe
+GOOGLE_JSON_PATH="storage/app/google/service_account.json"
+
+if [ ! -f "$GOOGLE_JSON_PATH" ]; then
     echo "Generando service_account.json de Google..."
     mkdir -p storage/app/google
-    echo "$GOOGLE_CREDENTIALS" | base64 --decode > storage/app/google/service_account.json
-    chmod 600 storage/app/google/service_account.json
-    chown www-data:www-data storage/app/google/service_account.json
+    echo $GOOGLE_SERVICE_ACCOUNT_JSON_BASE64 | base64 -d > "$GOOGLE_JSON_PATH"
+    chmod 600 "$GOOGLE_JSON_PATH"
+    chown www-data:www-data "$GOOGLE_JSON_PATH"
     echo "Archivo Google JSON generado ✅"
 fi
 
