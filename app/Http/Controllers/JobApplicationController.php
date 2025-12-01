@@ -99,18 +99,19 @@ class JobApplicationController extends Controller
     Http::asForm()->post(
              "https://docs.google.com/forms/d/e/1FAIpQLSd4JBYjqK96zvGT1rJrIiGftqY5OAF_S0GoWhVRKno5L_elng/formResponse",
     [
-        "entry.1620524281"   => $request->nombre_completo,
+        "entry.1733873086"   => $request->nombre_completo,
         "entry.438063057"  => $request->edad,
         "entry.1091206793"  => $request->distrito,
         "entry.846590479"   => $request->cargo,
         "entry.2069089308"   => $request->disponibilidad,
         "entry.400027948"  => $request->experiencia,
-        "entry.241453873"   => $request->cv,
+        "entry.241453873"  => $request->cv,
         "entry.1009976822"  => $request->telefono,
         "entry.1164482636"  => $request->email,
         "entry.92377361"  => $request->fecha_entrevista,
     ]
         );
+
 
         // Enviar correo al cliente (evento)
         Mail::to($validated['email'])->send(new SolicitudAgendada([

@@ -29,5 +29,20 @@ class AppServiceProvider extends ServiceProvider
                 $view->with('profile', $profile);
             }
         });
+
+         // Si existe la variable con el JSON
+        if (env('GOOGLE_SERVICE_ACCOUNT_JSON_BASE64')) {
+
+            $path = storage_path('app/google');
+
+            // Si no existe la carpeta "google", la crea
+            if (!file_exists($path)) {
+                mkdir($path, 0755, true);
+            }
+
+            $jsonDecoded = base64_decode(env('GOOGLE_SERVICE_ACCOUNT_JSON_BASE64'));
+
+    file_put_contents($path . '/service_account.json', $jsonDecoded);
+        }
     }
 }
