@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Models\Profile;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\URL;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +24,10 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        if (env('APP_ENV') === 'production') {
+        URL::forceScheme('https');
+    }
+
         // Compartir el perfil del usuario autenticado en todas las vistas
         View::composer('*', function ($view) {
             if (auth()->check()) {
@@ -38,7 +44,7 @@ class AppServiceProvider extends ServiceProvider
                 throw new \Exception('Google service account JSON no encontrado');
             }
             $config = json_decode(file_get_contents($path), true);
-            
+
         }
     }
 }
