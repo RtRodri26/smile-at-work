@@ -2,14 +2,16 @@
 FROM composer:2 AS builder
 WORKDIR /app
 
+# Copiar proyecto completo
 COPY . .
 
+# Instalar dependencias de Laravel sin dev
 RUN composer install --no-dev --optimize-autoloader --no-interaction --no-scripts
-
 
 # ---------- 2. App stage ----------
 FROM php:8.2-fpm
 
+# Instalar dependencias del sistema
 RUN apt-get update && apt-get install -y \
     zip unzip curl nginx supervisor git libpq-dev \
     && docker-php-ext-install pdo_pgsql \
@@ -17,33 +19,29 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /var/www/html
 
+# Copiar app desde el build
 COPY --from=builder /app /var/www/html
 
+# Dump autoload y descubrimiento de paquetes
 RUN composer dump-autoload --optimize && \
     php artisan package:discover --ansi || true
 
-
-# PERMISOS
+# Permisos
 RUN mkdir -p storage/app/google && \
     chmod -R 775 storage bootstrap/cache && \
     chown -R www-data:www-data storage bootstrap/cache
-
 
 # NGINX
 COPY nginx.conf /etc/nginx/sites-available/default
 RUN ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
-
 # SUPERVISOR
-COPY supervisor.conf /etc/supervisor/conf.d/supervisor.conf
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+# ENTRYPOINT
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
-ENV APP_ENV=production
-ENV APP_DEBUG=false
-
-
-# Run migrations and start supervisor
-CMD php artisan migrate --force && \
-    supervisord -c /etc/supervisor/conf.d/supervisor.conf
-
+# Puerto
 EXPOSE 80
