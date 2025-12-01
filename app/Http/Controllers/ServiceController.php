@@ -75,7 +75,7 @@ class ServiceController extends Controller
             'service_id'         => $companyService->id,
             'fecha_hora'         => $validated['fecha_hora'],
             'mensaje_adicional'  => $validated['mensaje_adicional'],
-            'estado'             => 'pendiente',
+            'estado'             => 'Pendiente',
             'link_meet'          => $meetLink, // null para cliente
         ]);
 
