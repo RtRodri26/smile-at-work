@@ -26,6 +26,16 @@ echo "Ejecutando migraciones..."
 php artisan migrate --force
 echo "Migraciones completadas ✅"
 
+# Crear storage link si no existe
+if [ ! -L public/storage ]; then
+    echo "Creando enlace simbólico de storage..."
+    php artisan storage:link
+    chown -R www-data:www-data public/storage
+    chmod -R 775 public/storage
+    echo "Storage link creado ✅"
+fi
+
+
 # Iniciar supervisord
 echo "Iniciando supervisord..."
 exec supervisord -c /etc/supervisor/conf.d/supervisord.conf
