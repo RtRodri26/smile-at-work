@@ -19,7 +19,7 @@ echo "Migraciones completadas ✅"
 if [ ! -f storage/app/google/service_account.json ] && [ ! -z "$GOOGLE_CREDENTIALS" ]; then
     echo "Generando service_account.json de Google..."
     mkdir -p storage/app/google
-    echo $GOOGLE_CREDENTIALS | base64 -d > storage/app/google/service_account.json
+    echo "$GOOGLE_CREDENTIALS" | base64 --decode > storage/app/google/service_account.json
     chmod 600 storage/app/google/service_account.json
     chown www-data:www-data storage/app/google/service_account.json
     echo "Archivo Google JSON generado ✅"
