@@ -225,13 +225,17 @@
         <div class="section-container">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <div class="flex items-center">
-                    <div class="relative">
-                        <i class="fas fa-smile text-2xl color-text-yellow"></i>
-                        <div class="absolute -top-1 -right-1 w-3 h-3 bubble color-bg-red"></div>
-                    </div>
-                    <span class="font-bold text-xl text-gray-800 ml-2 comic-font color-text-blue">Smile At Work</span>
-                </div>
+<div class="flex items-center">
+  <div class="relative">
+    <img src="{{ asset('storage/images/logo.jpg') }}"
+         alt="Logo Smile At Work"
+         class="w-10 h-10 rounded-full object-cover">
+    <div class="absolute -top-1 -right-1 w-3 h-3 bubble color-bg-red rounded-full"></div>
+  </div>
+
+  <span class="font-bold text-xl text-gray-800 ml-2 comic-font color-text-blue">Smile At Work</span>
+</div>
+
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
@@ -246,12 +250,20 @@
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button type="button" class="text-gray-600 hover:color-text-orange focus:outline-none focus:text-orange-500">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
+                    <button id="btn-mobile" aria-expanded="false" class="p-2 rounded focus:outline-none">
+          <i id="icon-mobile" class="fas fa-bars text-xl text-gray-600"></i>
+        </button>
                 </div>
             </div>
         </div>
+  <!-- Mobile simple menu (por defecto hidden) -->
+  <div id="mobile-menu-simple" class="md:hidden hidden px-4 pb-4">
+    <a href="#about" class="block py-2 text-gray-700 border-b">Quiénes Somos</a>
+    <a href="#values" class="block py-2 text-gray-700 border-b">Valores</a>
+    <a href="#services" class="block py-2 text-gray-700 border-b">Servicios</a>
+    <a href="{{ route('login') }}" class="block py-2 text-gray-700 border-b">Iniciar Sesión</a>
+    <a href="{{ route('register') }}" class="block mt-2 btn-primary px-4 py-2 rounded-full text-center">Registrarse</a>
+  </div>
     </nav>
 
     <!-- Hero Section -->
@@ -262,10 +274,7 @@
         <div class="absolute bottom-20 left-1/4 w-24 h-24 bubble floating opacity-20 color-bg-green" style="animation-delay: 1s;"></div>
         <div class="absolute bottom-10 right-10 w-12 h-12 bubble floating opacity-20 color-bg-orange" style="animation-delay: 1.5s;"></div>
         
-        <!-- Floating stickers -->
-        <div class="floating-sticker sticker-1 comic-font">¡Aprendizaje Divertido!</div>
-        <div class="floating-sticker sticker-2 comic-font">Espacios Seguros</div>
-        <div class="floating-sticker sticker-3 comic-font">Estimulación Temprana</div>
+  
         
         <div class="section-container pt-16 relative z-10">
             <div class="text-center max-w-4xl mx-auto fade-in">
@@ -280,7 +289,7 @@
                     <strong>¡Nosotros tenemos la solución!</strong>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#register" class="bg-white font-bold py-4 px-8 rounded-full soft-shadow transition-all duration-300 transform hover:scale-105 color-text-blue">
+                    <a href="{{ route('register') }}" class="bg-white font-bold py-4 px-8 rounded-full soft-shadow transition-all duration-300 transform hover:scale-105 color-text-blue">
                         Solicitar Nuestro Servicio
                     </a>
                     <a href="#services" class="border-2 border-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300">
@@ -434,7 +443,7 @@
                         </li>
                     </ul>
                     <div class="text-center">
-                        <a href="#register" class="btn-secondary px-8 py-3 rounded-full font-medium soft-shadow inline-block">
+                        <a href="{{ route('register') }}" class="btn-secondary px-8 py-3 rounded-full font-medium soft-shadow inline-block">
                             Solicitar para Empresa
                         </a>
                     </div>
@@ -466,7 +475,7 @@
                         </li>
                     </ul>
                     <div class="text-center">
-                        <a href="#register" class="px-8 py-3 rounded-full font-medium soft-shadow inline-block color-bg-green text-white hover:bg-opacity-90 transition-colors">
+                        <a href="{{ route('register') }}" class="px-8 py-3 rounded-full font-medium soft-shadow inline-block color-bg-green text-white hover:bg-opacity-90 transition-colors">
                             Solicitar para Universidad
                         </a>
                     </div>
@@ -498,7 +507,7 @@
                         </li>
                     </ul>
                     <div class="text-center">
-                        <a href="#register" class="btn-primary px-8 py-3 rounded-full font-medium soft-shadow inline-block">
+                        <a href="{{ route('register') }}" class="btn-primary px-8 py-3 rounded-full font-medium soft-shadow inline-block">
                             Solicitar para Evento
                         </a>
                     </div>
@@ -829,6 +838,26 @@
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
+
+
+        (function(){
+    const btn = document.getElementById('btn-mobile');
+    const menu = document.getElementById('mobile-menu-simple');
+    const icon = document.getElementById('icon-mobile');
+
+    btn.addEventListener('click', () => {
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        if (icon) icon.className = 'fas fa-times text-xl text-gray-600';
+      } else {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        if (icon) icon.className = 'fas fa-bars text-xl text-gray-600';
+      }
+    });
+  })();
     </script>
 </body>
 </html>
