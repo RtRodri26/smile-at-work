@@ -329,28 +329,28 @@
                 </div>
                 <div class="grid grid-cols-2 gap-4 fade-in" style="animation-delay: 0.3s;">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                        <img src="https://cms-imgp.jw-cdn.org/img/p/500300103/univ/art/500300103_univ_lsr_lg.jpg" 
                              alt="Niños jugando en guardería" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
                         <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full flex items-center justify-center color-bg-yellow soft-shadow">
                             <i class="fas fa-child text-white"></i>
                         </div>
                     </div>
                     <div class="relative mt-8">
-                        <img src="https://images.unsplash.com/photo-1516627145497-ae6953a11bdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                        <img src="https://toirobot.com/wp-content/uploads/2023/10/abatherapy-1920w.webp" 
                              alt="Actividades sensoriales para niños" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
                         <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full flex items-center justify-center color-bg-green soft-shadow">
                             <i class="fas fa-hands text-white"></i>
                         </div>
                     </div>
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                        <img src="https://limobelinwo.com/wp-content/uploads/2023/04/guarderia-de-una-oficina-5.jpg" 
                              alt="Guardería en espacio de trabajo" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
                         <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full flex items-center justify-center color-bg-blue soft-shadow">
                             <i class="fas fa-briefcase text-white"></i>
                         </div>
                     </div>
                     <div class="relative mt-8">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                        <img src="https://arizent.brightspotcdn.com/dims4/default/66b4ea2/2147483647/strip/true/crop/7952x5304+0+0/resize/1024x684!/format/webp/quality/90/?url=https%3A%2F%2Fsource-media-brightspot.s3.us-east-1.amazonaws.com%2F8e%2Fb4%2Fc666a2be48d3a7aa3dcc88b2a8ea%2Fcopy-of-little-founders-12.jpg" 
                              alt="Padre e hijo felices" class="rounded-lg soft-shadow hover-lift w-full h-48 object-cover">
                         <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full flex items-center justify-center color-bg-orange soft-shadow">
                             <i class="fas fa-heart text-white"></i>
@@ -639,20 +639,33 @@
                 <p class="text-gray-400 leading-relaxed">
                     Transformamos espacios laborales y educativos con alegría y profesionalismo, llevando guarderías y estimulación temprana donde más se necesita.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+<div class="flex space-x-4">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/1GdpLt9LkN/" target="_blank"
+       class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/smile_atwork?igsh=dXRidnY2ODBheXlt" target="_blank"
+       class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/smile-at-work-6a51a3397?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+       target="_blank"
+       class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <!-- TikTok (reemplaza YouTube) -->
+    <a href="https://www.tiktok.com/@smile.at.work?_r=1&_t=ZS-91sNB8lF3sz" target="_blank"
+       class="w-10 h-10 rounded-full color-bg-blue hover:color-bg-orange transition-colors duration-300 flex items-center justify-center">
+        <i class="fab fa-tiktok"></i>
+    </a>
+</div>
+
             </div>
             
             <!-- Columna 2: Enlaces rápidos -->
