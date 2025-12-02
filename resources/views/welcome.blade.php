@@ -266,39 +266,171 @@
   </div>
     </nav>
 
-    <!-- Hero Section -->
-      <section class="gradient-bg text-white pt-20 pb-20 relative overflow-hidden">
-        <!-- Background elements -->
-        <div class="absolute top-10 left-10 w-20 h-20 bubble floating opacity-20 color-bg-yellow"></div>
-        <div class="absolute top-1/4 right-20 w-16 h-16 bubble floating opacity-20 color-bg-blue" style="animation-delay: 0.5s;"></div>
-        <div class="absolute bottom-20 left-1/4 w-24 h-24 bubble floating opacity-20 color-bg-green" style="animation-delay: 1s;"></div>
-        <div class="absolute bottom-10 right-10 w-12 h-12 bubble floating opacity-20 color-bg-orange" style="animation-delay: 1.5s;"></div>
+   <!-- Hero Section - Diseño Elegante Mejorado -->
+<section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-yellow-50 pt-24 pb-20 md:pt-32 md:pb-28">
+    <!-- Fondo con diseño geométrico -->
+    <div class="absolute inset-0 overflow-hidden">
+        <!-- Formas abstractas suaves -->
+        <div class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-gradient-to-br from-blue-100/50 to-transparent"></div>
+        <div class="absolute top-1/4 -right-20 w-96 h-96 rounded-full bg-gradient-to-bl from-yellow-100/40 to-transparent"></div>
+        <div class="absolute bottom-1/3 left-1/4 w-64 h-64 rounded-full bg-gradient-to-tr from-green-100/30 to-transparent"></div>
+        <div class="absolute -bottom-20 right-1/4 w-72 h-72 rounded-full bg-gradient-to-tl from-pink-100/30 to-transparent"></div>
         
-  
-        
-        <div class="section-container pt-16 relative z-10">
-            <div class="text-center max-w-4xl mx-auto fade-in">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight comic-font">
-                    Guarderías Móviles donde<br><span class="rainbow-text">Trabajas o Estudias</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 opacity-90">
-                    Llevamos espacios seguros, flexibles y llenos de estímulos para niños directamente a empresas, universidades y eventos.
-                </p>
-                <p class="text-lg mb-10 max-w-3xl mx-auto">
-                    Sabemos que muchos padres y madres no tienen con quién dejar a sus pequeños, y eso les impide trabajar, estudiar o capacitarse con tranquilidad. 
-                    <strong>¡Nosotros tenemos la solución!</strong>
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('register') }}" class="bg-white font-bold py-4 px-8 rounded-full soft-shadow transition-all duration-300 transform hover:scale-105 color-text-blue">
-                        Solicitar Nuestro Servicio
-                    </a>
-                    <a href="#services" class="border-2 border-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-blue-800 transition-all duration-300">
-                        Conocer Servicios
-                    </a>
+        <!-- Patrón de puntos sutiles -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-1/4 w-1 h-1 bg-blue-400 rounded-full"></div>
+            <div class="absolute top-1/3 right-1/3 w-2 h-2 bg-yellow-400 rounded-full"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+            <div class="absolute bottom-10 right-1/4 w-2.5 h-2.5 bg-orange-400 rounded-full"></div>
+        </div>
+    </div>
+    
+    <!-- Elementos decorativos elegantes -->
+    <div class="absolute top-16 left-10 w-24 h-24 opacity-10">
+        <div class="w-full h-full border-2 border-blue-300 rounded-full animate-pulse"></div>
+    </div>
+    <div class="absolute bottom-32 right-16 w-32 h-32 opacity-10">
+        <div class="w-full h-full border-2 border-yellow-300 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+    </div>
+    
+    <!-- Iconos decorativos flotantes suaves -->
+    <div class="absolute top-1/3 right-1/5 transform -translate-y-1/2">
+        <div class="w-16 h-16 rounded-full bg-white/80 shadow-lg backdrop-blur-sm flex items-center justify-center border border-blue-100">
+            <i class="fas fa-heart text-xl text-pink-400"></i>
+        </div>
+    </div>
+    <div class="absolute bottom-1/3 left-1/5 transform translate-y-1/2">
+        <div class="w-20 h-20 rounded-full bg-white/80 shadow-lg backdrop-blur-sm flex items-center justify-center border border-yellow-100">
+            <i class="fas fa-star text-2xl text-yellow-500"></i>
+        </div>
+    </div>
+    
+    <!-- Contenido principal -->
+    <div class="section-container relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <!-- Badge elegante -->
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex items-center bg-gradient-to-r from-blue-500/10 to-yellow-500/10 backdrop-blur-sm rounded-full px-6 py-3 border border-blue-200/50">
+                    <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                    <span class="text-sm font-medium text-blue-800">¡Transformando familias desde 2024!</span>
                 </div>
             </div>
+            
+            <!-- Título principal elegante -->
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-center text-gray-900 leading-tight">
+                <span class="block">Guarderías Móviles</span>
+                <span class="block mt-2">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400">
+                        Donde trabajas
+                    </span>
+                    <span class="text-gray-700 mx-2">o</span>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-yellow-500 to-orange-500">
+                        estudias
+                    </span>
+                </span>
+            </h1>
+            
+            <!-- Subtítulo legible -->
+            <div class="relative mb-8 md:mb-12">
+                <div class="absolute -left-6 top-1/2 transform -translate-y-1/2 hidden md:block">
+                    <i class="fas fa-quote-left text-3xl text-blue-200"></i>
+                </div>
+                <p class="text-lg md:text-xl text-gray-700 text-center leading-relaxed px-4 md:px-12">
+                    Llevamos <span class="font-semibold text-blue-600">espacios seguros y estimulantes</span> para niños directamente a empresas, universidades y eventos, para que padres y madres puedan <span class="font-semibold text-green-600">trabajar o estudiar con tranquilidad</span>.
+                </p>
+                <div class="absolute -right-6 top-1/2 transform -translate-y-1/2 hidden md:block">
+                    <i class="fas fa-quote-right text-3xl text-yellow-200"></i>
+                </div>
+            </div>
+            
+            <!-- Mensaje destacado con diseño elegante -->
+            <div class="bg-gradient-to-r from-blue-50 via-white to-yellow-50 rounded-2xl p-6 md:p-8 mb-10 border border-blue-100 shadow-sm max-w-3xl mx-auto">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-yellow-100 flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-xl text-yellow-600"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-800">
+                            <span class="font-semibold text-blue-700">Sabemos el desafío:</span> Muchos padres no tienen con quién dejar a sus pequeños, limitando su desarrollo profesional y educativo. 
+                            <span class="font-semibold text-green-700 block mt-2">¡Tenemos la solución perfecta!</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botones elegantes -->
+            <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-12">
+                <!-- Botón primario -->
+                <a href="{{ route('register') }}" 
+                   class="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold py-4 px-8 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 min-w-[240px] text-center">
+                   <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                   <span class="relative z-10 flex items-center justify-center">
+                       <i class="fas fa-rocket mr-3"></i>
+                       Solicitar Servicio
+                   </span>
+                </a>
+                
+                <!-- Botón secundario -->
+                <!-- <a href="#services" 
+                   class="group relative overflow-hidden bg-white text-blue-700 font-semibold py-4 px-8 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 min-w-[240px] text-center border border-blue-200">
+                   <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                   <span class="relative z-10 flex items-center justify-center">
+                       <i class="fas fa-play-circle mr-3 text-blue-600"></i>
+                       Ver Demo
+                   </span>
+                </a> -->
+
+                
+            </div>
+            
+            <!-- Beneficios destacados -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-shield-alt text-blue-600"></i>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-1">100% Seguro</div>
+                    <div class="text-sm text-gray-600">Espacios certificados</div>
+                </div>
+                
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-graduation-cap text-yellow-600"></i>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-1">Educativo</div>
+                    <div class="text-sm text-gray-600">Estimulación temprana</div>
+                </div>
+                
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-clock text-green-600"></i>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-1">Flexible</div>
+                    <div class="text-sm text-gray-600">Horarios adaptables</div>
+                </div>
+                
+                <div class="text-center p-4">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-heart text-pink-600"></i>
+                    </div>
+                    <div class="font-bold text-gray-900 mb-1">Profesional</div>
+                    <div class="text-sm text-gray-600">Personal calificado</div>
+                </div>
+            </div>
+            
+            <!-- Flecha de scroll elegante -->
+            <div class="mt-16 flex justify-center">
+                <a href="#about" class="animate-bounce-slow">
+                    <div class="w-12 h-12 rounded-full border-2 border-blue-200 flex items-center justify-center group hover:border-blue-300 transition-colors duration-300">
+                        <i class="fas fa-chevron-down text-blue-400 group-hover:text-blue-500 transition-colors duration-300"></i>
+                    </div>
+                </a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Quiénes Somos -->
     <section id="about" class="py-20 bg-white relative overflow-hidden">
@@ -748,15 +880,15 @@
                 <ul class="space-y-4">
                     <li class="flex items-start">
                         <i class="fas fa-map-marker-alt mt-1 mr-3 color-text-blue"></i>
-                        <span class="text-gray-400">Oficinas en principales ciudades de Latinoamérica</span>
+                        <span class="text-gray-400">Chimbote - Nv. Chimbote - Perú</span>
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-phone mr-3 color-text-blue"></i>
-                        <a href="tel:+18001234567" class="text-gray-400 hover:text-white transition-colors duration-300">+1 (800) 123-4567</a>
+                        <a href="tel:+18001234567" class="text-gray-400 hover:text-white transition-colors duration-300">+51 936 798 481</a>
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-envelope mr-3 color-text-blue"></i>
-                        <a href="mailto:info@smileatwork.com" class="text-gray-400 hover:text-white transition-colors duration-300">info@smileatwork.com</a>
+                        <a href="smileatwork292517@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">smileatwork292517@gmail.com</a>
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-clock mr-3 color-text-blue"></i>
@@ -811,7 +943,7 @@
         <!-- Logo desarrolladores -->
         <div class="text-center mt-8 pt-6 border-t border-gray-700">
             <p class="text-gray-500 text-sm">
-                Desarrollado con <i class="fas fa-heart color-text-red mx-1"></i> por 
+                Desarrollado  por 
                 <span class="font-bold color-text-yellow">RETO & EFOJ</span> | 
                 Soluciones Digitales Profesionales
             </p>
