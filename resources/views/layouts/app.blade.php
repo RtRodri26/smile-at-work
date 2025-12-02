@@ -277,11 +277,11 @@
                 </a>
 
                 <!-- Configuración -->
-                <a href="#" 
+                <!-- <a href="#" 
                    class="flex items-center space-x-3 p-3 nav-item">
                     <i class="fas fa-cog w-5"></i>
                     <span>Configuración</span>
-                </a>
+                </a> -->
             </nav>
             
             <!-- User Info & Logout -->
