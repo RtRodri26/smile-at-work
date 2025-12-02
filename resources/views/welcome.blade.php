@@ -312,7 +312,7 @@
             <div class="flex justify-center mb-8">
                 <div class="inline-flex items-center bg-gradient-to-r from-blue-500/10 to-yellow-500/10 backdrop-blur-sm rounded-full px-6 py-3 border border-blue-200/50">
                     <span class="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                    <span class="text-sm font-medium text-blue-800">¡Transformando familias desde 2024!</span>
+                    <span class="text-sm font-medium text-blue-800">¡Transformando familias desde 2025!</span>
                 </div>
             </div>
             
@@ -915,7 +915,7 @@
                 <!-- Copyright -->
                 <div class="mb-4 md:mb-0">
                     <p class="text-gray-400">
-                        &copy; 2024 <span class="color-text-yellow font-semibold">Smile At Work</span>. Todos los derechos reservados.
+                        &copy; 2025 <span class="color-text-yellow font-semibold">Smile At Work</span>. Todos los derechos reservados.
                     </p>
                 </div>
                 
