@@ -123,9 +123,9 @@ class EventServiceController extends Controller
         //     'detalle' => $validated['necesidades_especiales'],
         // ]));
 
-        Mail::to($validated['email'])->send(
-            new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'evento', 'cliente'))
-        );
+        // Mail::to($validated['email'])->send(
+        //     new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'evento', 'cliente'))
+        // );
 
         // Crear evento en Google Calendar para admin
         $adminEmail = config('mail.admin_email');
@@ -165,9 +165,9 @@ class EventServiceController extends Controller
         //     'detalle' => $validated['necesidades_especiales'],
         // ]));
 
-        Mail::to(config('mail.admin_email'))->send(
-            new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'evento', 'admin', $meetLink))
-        );
+        // Mail::to(config('mail.admin_email'))->send(
+        //     new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'evento', 'admin', $meetLink))
+        // );
 
         $calendarUrl = $this->calendar->buildEventClientCalendarUrl(
             $validated,

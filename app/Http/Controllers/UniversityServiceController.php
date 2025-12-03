@@ -114,9 +114,9 @@ class UniversityServiceController extends Controller
         //     'detalle' => $validated['comentarios'],
         // ]));
 
-        Mail::to($validated['email'])->send(
-            new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'universidad', 'cliente', $meetLink))
-        );
+        // Mail::to($validated['email'])->send(
+        //     new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'universidad', 'cliente', $meetLink))
+        // );
 
         // Crear evento en Google Calendar para admin
         $adminEmail = config('mail.admin_email');
@@ -154,9 +154,9 @@ class UniversityServiceController extends Controller
         // ]));
 
 
-        Mail::to(config('mail.admin_email'))->send(
-            new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'universidad', 'admin', $meetLink))
-        );
+        // Mail::to(config('mail.admin_email'))->send(
+        //     new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'universidad', 'admin', $meetLink))
+        // );
 
         $calendarUrl = $this->calendar->buildUniversityClientCalendarUrl(
             $validated,

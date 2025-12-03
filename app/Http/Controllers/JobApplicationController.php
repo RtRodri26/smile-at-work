@@ -114,20 +114,20 @@ class JobApplicationController extends Controller
 
 
         // Enviar correo al cliente (evento)
-        Mail::to($validated['email'])->send(new SolicitudAgendada([
-            'nombre'   => $validated['nombre_completo'],
-            'fecha'    => $fecha->format('Y-m-d'),
-            'hora'     => $fecha->format('H:i'),
-            'cargo'  => $validated['cargo'],
-            'meetLink' => null,
-            'tipo_usuario' => 'cliente',
-            'cv' => asset('storage/'.$cvPath),
-            'telefono' => $validated['telefono'],
-            'email' => $validated['email'],
-            'fecha_entrevista' => $validated['fecha_entrevista'],
-            'experiencia' => $validated['experiencia'],
-            'detalle' => $validated['experiencia'],
-        ]));
+        // Mail::to($validated['email'])->send(new SolicitudAgendada([
+        //     'nombre'   => $validated['nombre_completo'],
+        //     'fecha'    => $fecha->format('Y-m-d'),
+        //     'hora'     => $fecha->format('H:i'),
+        //     'cargo'  => $validated['cargo'],
+        //     'meetLink' => null,
+        //     'tipo_usuario' => 'cliente',
+        //     'cv' => asset('storage/'.$cvPath),
+        //     'telefono' => $validated['telefono'],
+        //     'email' => $validated['email'],
+        //     'fecha_entrevista' => $validated['fecha_entrevista'],
+        //     'experiencia' => $validated['experiencia'],
+        //     'detalle' => $validated['experiencia'],
+        // ]));
 
         // Crear evento en Google Calendar para admin
         $adminEmail = config('mail.admin_email');
@@ -148,25 +148,25 @@ class JobApplicationController extends Controller
         );
 
         // Enviar correo a admin
-        Mail::to($adminEmail)->send(new SolicitudAgendada([
-            'nombre'   => 'Administrador',
-            'fecha'    => $fecha->format('Y-m-d'),
-            'hora'     => $fecha->format('H:i'),
-            'edad'     => $validated['edad'],
-            'distrito' => $validated['distrito'],   
-            'cargo'  => $validated['cargo'],
-            'disponibilidad' => $validated['disponibilidad'],
-            'experiencia' => $validated['experiencia'],
-            'telefono' => $validated['telefono'],
-            'email'    => $validated['email'],
-            'persona_contacto' => $validated['nombre_completo'],
-            'mensaje_adicional' => $validated['experiencia'],
-            'fecha_entrevista' => $validated['fecha_entrevista'],
-            'meetLink' => $meetLink,
-            'tipo_usuario' => 'admin',
-            'cv' => asset('storage/'.$cvPath),
-            'detalle' => $validated['experiencia'],
-        ]));
+        // Mail::to($adminEmail)->send(new SolicitudAgendada([
+        //     'nombre'   => 'Administrador',
+        //     'fecha'    => $fecha->format('Y-m-d'),
+        //     'hora'     => $fecha->format('H:i'),
+        //     'edad'     => $validated['edad'],
+        //     'distrito' => $validated['distrito'],   
+        //     'cargo'  => $validated['cargo'],
+        //     'disponibilidad' => $validated['disponibilidad'],
+        //     'experiencia' => $validated['experiencia'],
+        //     'telefono' => $validated['telefono'],
+        //     'email'    => $validated['email'],
+        //     'persona_contacto' => $validated['nombre_completo'],
+        //     'mensaje_adicional' => $validated['experiencia'],
+        //     'fecha_entrevista' => $validated['fecha_entrevista'],
+        //     'meetLink' => $meetLink,
+        //     'tipo_usuario' => 'admin',
+        //     'cv' => asset('storage/'.$cvPath),
+        //     'detalle' => $validated['experiencia'],
+        // ]));
 
         $calendarUrl = $this->calendar->buildSolicitudClientCalendarUrl(
             $validated,
