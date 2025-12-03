@@ -227,7 +227,7 @@
                 <!-- Logo -->
 <div class="flex items-center">
   <div class="relative">
-    <img src="{{ asset('storage/logo.png') }}"
+    <img src="https://i.postimg.cc/rpLtKHwF/3.jpg"
          alt="Logo Smile At Work"
          class="w-10 h-10 rounded-full object-cover">
     <div class="absolute -top-1 -right-1 w-3 h-3 bubble color-bg-red rounded-full"></div>

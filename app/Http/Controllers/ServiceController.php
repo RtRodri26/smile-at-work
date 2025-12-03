@@ -127,9 +127,9 @@ class ServiceController extends Controller
         // ]));
 
 
-Mail::to($validated['email'])->send(
-    new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'empresa', 'cliente'))
-);
+// Mail::to($validated['email'])->send(
+//     new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'empresa', 'cliente'))
+// );
 
         // 5. Enviar correo al ADMIN (con link)
     $adminEmail = config('mail.admin_email'); // puedes definirlo en .env
@@ -157,9 +157,9 @@ Mail::to($validated['email'])->send(
     //     'detalle' => $validated['mensaje_adicional'],
     // ]));
 
-Mail::to(config('mail.admin_email'))->send(
-    new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'empresa', 'admin', $meetLink))
-);
+// Mail::to(config('mail.admin_email'))->send(
+//     new CitaAgendada(MailHelper::armarDatosCorreo($validated, 'empresa', 'admin', $meetLink))
+// );
         // ---------------------------------------------------
         // 7. URL PARA EL CALENDARIO DEL CLIENTE (OPCIONAL)
         // ---------------------------------------------------
