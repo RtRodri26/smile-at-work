@@ -13,6 +13,7 @@ use App\Http\Controllers\UniversityServiceController;
 use App\Http\Controllers\EventServiceController;
 use App\Http\Controllers\JobApplicationController;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -75,4 +76,18 @@ Route::prefix('community')->group(function () {
     Route::post('/posts', [CommunityController::class, 'storePost'])->name('community.posts.store');
     Route::post('/posts/{post}/like', [CommunityController::class, 'likePost'])->name('community.posts.like');
     Route::post('/posts/{post}/comment', [CommunityController::class, 'storeComment'])->name('community.posts.comment');
+});
+
+
+Route::get('/test-brevo', function () {
+    try {
+        Mail::raw('Correo de prueba usando Brevo SMTP', function ($message) {
+            $message->to('edwinosoriojuaquin@gmail.com')
+                    ->subject('Test SMTP Brevo');
+        });
+
+        return 'Correo enviado correctamente';
+    } catch (\Exception $e) {
+        return $e->getMessage();
+    }
 });
